@@ -65,7 +65,7 @@ public class Cliente
     }
     boolean autenticar(String login, String senha)
     {
-        if (login == this.email & senha == this.senha)
+        if (login.toUpperCase().equals(this.email) & senha.equals(this.senha))
         {
             return true;
         }
