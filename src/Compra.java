@@ -5,7 +5,7 @@ public class Compra
     String data_compra;
 
     public Compra(String data_compra) 
-    {
+    {   
         this.data_compra = data_compra;
     }
     float calcularValorTotal()
