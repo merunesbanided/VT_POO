@@ -1,11 +1,16 @@
+
+import java.util.Calendar;
+
 public class Compra 
 {
-    Cliente cliente = new Cliente();
-    Produto produto = new Produto();
-    String data_compra;
+    Cliente cliente;
+    Produto produto;
+    Calendar data_compra = Calendar.getInstance();
 
-    public Compra(String data_compra) 
+    public Compra(Calendar data_compra, Produto p,Cliente c) 
     {   
+        this.cliente = c;
+        this.produto = p;
         this.data_compra = data_compra;
     }
     float calcularValorTotal()
@@ -19,7 +24,7 @@ public class Compra
     {
         System.out.println("Nome: "+cliente.nome);
         System.out.println("CPF: "+cliente.cpf);
-        produto.exibirProduto();
+        System.out.println(produto.toString());
         System.out.println("Valor total: "+calcularValorTotal());
     }
     

@@ -48,12 +48,10 @@ public class Produto
         int fim_validade = hora/24;
         return fim_validade;  
     }
-    void exibirProduto()
+
+    @Override
+    public String toString() 
     {
-        System.out.println("Código: "+this.codigo_produto);
-        System.out.println("Nome: "+this.nome);
-        System.out.println("Modelo: "+this.modelo);
-        System.out.println("Marca: "+this.marca);
-        System.out.println("Preço: "+this.preco);
-    }    
+        return "Produto{" + "codigo_produto=" + codigo_produto + ", nome=" + nome + ", modelo=" + modelo + ", marca=" + marca + ", preco=" + preco + '}';
+    }
 }
